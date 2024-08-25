@@ -42,4 +42,5 @@ try:
 except:
     print("La variable my_tuple no existe porque fue borrada")
 
+#buscar si existe el elemento dentro de la tupla (tambien sirve para listas y sets)
 print("Rodrigo" in my_other_tuple)
