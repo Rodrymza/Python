@@ -38,3 +38,29 @@ print(my_dict)
 print("Rodry" in my_dict)
 print("Nombre" in my_dict) #en este caso lo que busca es la clave, no el valor
 
+print(my_dict["Apellido"])
+
+#obtener un listado cada uno de los items, clave-valor
+print(my_dict.items())
+
+#obtiene un listado de las keys
+print(my_dict.keys())
+
+#obtiene un listado de todos los elementos guardados
+print(my_dict.values())
+
+
+
+#crear un diccionario a partir de otros objetos
+lista=["hola", "como", "va"]
+my_new_dict=dict.fromkeys((lista))
+print(my_new_dict)
+
+#ej, crear un diccionario vacio con las claves almacenadas en una lista
+#el segundo parametro es para darle un valor predeterminado al valor almacenado
+campos=["Nombre", "Apellido", "DNI", "Direccion"]
+valores=["Rodrigo", "Ramirez", 36499229, "Moldes"]
+diccionario=dict.fromkeys(campos, valores)
+print(diccionario)
+print(list(diccionario)) #se crea un lista con las keys del diccionario, las claves no se toman en cuenta
+
