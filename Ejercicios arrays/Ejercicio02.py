@@ -7,9 +7,9 @@ palabrasinv=[]
 for i in range(tamanio):
     palabras.append(input("Ingrese una palabra: "))
 
-for i in range(tamanio):
-    palabrasinv.insert(0,palabras[i])  #(indice, elemento a agregar), al agregarlo siempre en el indice 0 se agregan los elementos en orden iverso
+for elemento in palabras:
+    palabrasinv.insert(0,elemento)  #(indice, elemento a agregar), al agregarlo siempre en el indice 0 se agregan los elementos en orden iverso
     
-for i in range(tamanio):    
-    print(palabrasinv[i])
+for elemento in palabrasinv:    
+    print(elemento)
 
