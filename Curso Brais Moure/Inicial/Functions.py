@@ -32,7 +32,14 @@ print_name("Rodrigo","Ramirez")
 print_name(surname="Ramirez", name="Rodrigo")   #pueden pasarse los parametros en otro orden
                                                 #si se coloca que parametro se esta enviando
                         
-def print_name_defaut(name, surname="Ramirez"):
+def print_name_defaut(name, surname="Ramirez"): #se pueden indicar parametros por defecto
     print(f"{name}, {surname}")
     
-print_name_defaut("Juan")
+print_name_defaut("Juan Cruz")
+
+def print_texts(*texts):     #se pueden pasar infinita cantidad de parametros
+    for text in texts:         #funcion con parametros arbitrarios
+        print(text.upper())    #imprime todos los textos en mayusculas
+        
+print_texts("hola")
+print_texts("hola","como","va")
