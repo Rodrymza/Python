@@ -1,7 +1,7 @@
 dia=0
 dia=int(input("Ingrese un dia de la semana \n"))
 match dia:
-    case 1:
+    case 1 | 8 | 9:
         print("El dia es lunes")
     case 2:
         print("El dia es martes")        
