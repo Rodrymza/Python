@@ -4,7 +4,6 @@ def agregar_pais(diccionario):
         print("El pais ya se encuentra agregado")
     else:
         diccionario[nombre_pais] = []
-        print(diccionario)
         agregar_cuidad(diccionario, nombre_pais)
     
 def agregar_cuidad(diccionario, nombre_pais):
@@ -37,9 +36,11 @@ def eliminar_cuidad(diccionario, pais):
         print("\tLista de ciudades:")
         print(*diccionario[pais],sep="\n")
         eliminar = input("Escriba ciudad a eliminar\n").capitalize()    #Agregar verificacion de ciudad
-        print(eliminar)
-        diccionario[pais].remove(eliminar)
-      
+        if eliminar in diccionario[pais]:
+            diccionario[pais].remove(eliminar)
+            print("Ciudad eliminada satisfactoriamente")
+        else:
+            print("Ciudad erronea")      
 
 
 
