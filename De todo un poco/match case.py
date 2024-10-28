@@ -1,7 +1,7 @@
 dia=0
 dia=int(input("Ingrese un dia de la semana \n"))
 match dia:
-    case 1 | 8 | 9:
+    case 1 | 8 | 9:  #simbolo | para mas de una condicion
         print("El dia es lunes")
     case 2:
         print("El dia es martes")        
@@ -16,5 +16,5 @@ match dia:
     case 7:
         print("El dia es domingo")
     case _:
-        print("No ingresaste un dia valido")  
+        print("No ingresaste un dia valido")
             
