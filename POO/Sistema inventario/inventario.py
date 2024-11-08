@@ -18,7 +18,7 @@ class Inventario:
         
     def modificar_stock_producto(self, cantidad):
         self.mostrar_inventario()
-        producto = input("Ingresa el producto a eliminar").title()
+        producto = input("Ingresa el producto a modificar stock").title()
         if self.lista_productos.get(producto):
              self.lista_productos[producto].modificar_cantidad(cantidad)
              if self.lista_productos[producto] == 0:
@@ -38,7 +38,7 @@ class Inventario:
     
     def valor_total_inventario(self):
         total = 0.0
-        for nombre, producto in self.lista_productos.items():
+        for producto in self.lista_productos.values():
             total += (producto.precio * producto.cantidad)
         print(f"El valor total del inventario es ${total}")
         
