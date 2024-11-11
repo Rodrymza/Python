@@ -9,14 +9,21 @@ class Agencia:
     def agregar_auto(self):
         auto = Auto()
         auto.pedir_datos()
-        self.lista_vehiculos.append(auto)
-        print("Auto agregado correctamente")
+        if not self.mayor_a_maximo():
+            self.lista_vehiculos.append(auto)
+            print("Auto agregado correctamente")
+        else:
+            print("No se pudo agregar el auto, se supero el maximo")
 
     def agregar_camion(self):
         camion = Camion()
         camion.pedir_datos()
-        self.lista_vehiculos.append(camion)
-        print("Camión agregado correctamente")
+        if not self.mayor_a_maximo():
+            self.lista_vehiculos.append(camion)
+            print("Camión agregado correctamente")
+        else:
+            print("No se pudo agregar el camion, se supero el maximo")
+        
 
     def valor_total_agencia(self):
         suma = 0
@@ -39,7 +46,10 @@ class Agencia:
         return total_camiones
     
     def agregar_vehiculo(self, vehiculo):
-         self.lista_vehiculos.append(vehiculo)
+        if not self.mayor_a_maximo():
+            self.lista_vehiculos.append(vehiculo)
+        else:
+            print("No se pudo agregar el vehiculo, se supero el maximo")
         
     def verificar_maximo_vehiculos(self, maximo):
         if len(self.lista_vehiculos) < maximo:
@@ -52,3 +62,6 @@ class Agencia:
         for vehiculo in self.lista_vehiculos:
             print(f"{vehiculo.marca} {vehiculo.modelo}")
             i += 1
+            
+    def mayor_a_maximo(self, maximo):
+        return maximo >= len(self.lista_vehiculos)

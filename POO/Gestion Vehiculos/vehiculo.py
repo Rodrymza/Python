@@ -10,6 +10,9 @@ class Vehiculo:
 
     def pedir_datos():
         pass
+    def mayor_minimo(self,minimo):
+        return True if self.precio > minimo else False
+    
 class Auto(Vehiculo):
     def __init__(self) -> None:
         super().__init__()
