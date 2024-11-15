@@ -1,7 +1,8 @@
 class Nota:
-    def __init__(self, valor: int, catedra: str):
+    def __init__(self, valor: int, descripcion: str):
         self.valor = valor
-        self.catedra = catedra
+        self.catedra = descripcion
         
     def mostrar_nota(self):
-        print(f"Materia: {self.nombre} Nota: {self.valor}")
+        print(f"Descripcion: {self.descripcion} Nota: {self.valor}")
+        
