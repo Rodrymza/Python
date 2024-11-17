@@ -14,7 +14,6 @@ def main():
             break
     biblioteca.mostrar_biblioteca()
     
-       
 def crear_estante():
     nombre_estante = input("Ingresa el nombre del estante: ")
     nuevo_estante = Estante(nombre_estante)
